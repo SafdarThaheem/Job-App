@@ -8,14 +8,26 @@
         <outputRelativeToContentRoot value="true" />
         <module name="reviewMS" />
         <module name="companyMS" />
-        <module name="jobAppMicroservices" />
+      </profile>
+      <profile name="Annotation profile for jobMS" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="jobMS" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jobAppMicroservices" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="companyMS" options="-parameters" />
       <module name="jobAppMicroservices" options="-parameters" />
+      <module name="jobMS" options="-parameters" />
       <module name="reviewMS" options="-parameters" />
     </option>
   </component>

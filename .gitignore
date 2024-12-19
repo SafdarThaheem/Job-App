@@ -1,43 +1,60 @@
-*#
+# IntelliJ IDEA
 *.iml
 *.ipr
 *.iws
+
+# Java
 *.jar
+*.class
 *.sw?
 *~
-.#*
-.*.md.html
+
+# MacOS system files
 .DS_Store
-.attach_pid*
+
+# Eclipse project files
 .classpath
 .factorypath
-.gradle
-.metadata
 .project
-.recommenders
 .settings
+
+# Gradle
+.gradle
+build/
+bin/
+
+# Node.js
+node_modules/
+
+# Eclipse IDE
+.recommenders
 .springBeans
 .vscode
-/code
+
+# Specific files to ignore
+code/
 MANIFEST.MF
 _site/
-activemq-data
-bin
-build
-!/**/src/**/bin
-!/**/src/**/build
+activemq-data/
 build.log
 dependency-reduced-pom.xml
 dump.rdb
 interpolated*.xml
 lib/
 manifest.yml
-out
+out/
 overridedb.*
+
+# Target directories in any subfolder (recursively)
 **/target/
-.flattened-pom.xml
-secrets.yml
-.gradletasknamecache
-.sts4-cache
+
+# Files created by IDE and editors
+*.md.html
+.attach_pid*
 .git-hooks/
-node_modules
+**/.gradletasknamecache
+.sts4-cache
+
+# Other custom files to ignore
+**/build/
+**/bin/
